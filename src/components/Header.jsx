@@ -9,12 +9,11 @@ export default function Header({ currencys, fun, cur }) {
             <div className='select-button'>
                 <select value={cur} name="coinSelect" id="coinSelect" onChange={() => { fun(document.getElementById("coinSelect").value) }}>
                     {currencys.map((item, index) => {
-                        <option value={item} key={index} > {item}</option>
+                        <option value={item} key={index}> {item} </option>
                     })
                     }
                 </select>
             </div>
-            <button className='toogleModo'></button>
         </header>
     )
 }

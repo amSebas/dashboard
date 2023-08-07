@@ -24,7 +24,7 @@ export default function App() {
     const curr = await currency.json() 
 
     setCoins(json)
-    setselCur(curr)
+    setCurrency(curr)
 
     console.log(json)
   }
