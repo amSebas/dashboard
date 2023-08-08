@@ -18,15 +18,13 @@ export default function App() {
     );
     const json = await response.json()
 
-    const currency = await fetch(
+    const currencys = await fetch(
       `https://api.coingecko.com/api/v3/simple/supported_vs_currencies`
     );
-    const curr = await currency.json() 
+    const cur = await currencys.json() 
 
     setCoins(json)
-    setCurrency(curr)
-
-    console.log(json)
+    setCurrency(cur)
   }
 
   useEffect(() => {

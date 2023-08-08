@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import InputConvert from "./InputConvert"; // Componente 
-import { FaExchangeAlt } from "react-icons/fa"; // Icono 
-// import "./Convert.css"; // Estilos 
+import InputConvert from "./InputConvert"; 
+import { FaExchangeAlt } from "react-icons/fa"; 
+// import "./Convert.css"; 
 // import { object } from "prop-types";
 
 export default function Convert() {
@@ -31,7 +31,7 @@ export default function Convert() {
         getData()
     }, []);
 
-    useEffect(_ => {
+    useEffect(() => {
         let a, b
         coin.forEach(({ symbol, current_price }) => {
             if (symbol == selCoin1) {
