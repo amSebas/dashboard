@@ -18,9 +18,6 @@ export default function Footer () {
             </div>
             <div className="footer-down">
                 <p>Developed by</p>
-                <div>
-                    <img src={LogoKarol} alt="logo Karol" />
-                </div>
             </div>
         </div>
     )
