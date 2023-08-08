@@ -1,6 +1,7 @@
 import { colorDec, deleteDec } from "../App"
 import { FaPlay } from 'react-icons/fa'
 import Graph from "./Graph"
+import './CardPrincipal.css'
 
 
 export default function CardPrincipal({ json: {

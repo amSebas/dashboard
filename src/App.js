@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import { Line } from 'react-chartjs-2';
 import Header from './components/Header'
 import PrincipalCard from './components/CardPrincipal'
 import Card from './components/Card'
@@ -7,7 +8,7 @@ import Convert from './components/Convert'
 import TableCoins from './components/TableCoins'
 import Footer from './components/Footer'
 
-export default function App() {
+export default function App()  {
   const [coins, setCoins] = useState()
   const [currency, setCurrency] = useState()
   const [selCur, setselCur] = useState("usd")

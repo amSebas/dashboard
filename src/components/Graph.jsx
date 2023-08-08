@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { Line } from "react-chartjs-2";
+import './Graph.css'
 //importar propiedades para el grafico libreria chart js
 import {
     Chart as ChartJS,

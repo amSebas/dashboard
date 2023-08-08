@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import InputConvert from "./InputConvert"; 
 import { FaExchangeAlt } from "react-icons/fa"; 
-// import "./Convert.css"; 
-// import { object } from "prop-types";
+import "./Convert.css"; 
+//import { object } from "prop-types";
 
 export default function Convert() {
     const [coin, setCoin] = useState([])
@@ -12,31 +12,24 @@ export default function Convert() {
     const [mainTxt, setMainTxt] = useState(0)
     const [res, setRes] = useState(0)
 
-    // Función asíncrona para obtener los datos de la API 
     const getData = async () => {
         // Hacer petición a la API 
         const result = await axios.get(
             "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1"
         );
-
-        // Establecer el valor de los datos obtenidos 
         setCoin(result.data);
-
-        // Mostrar datos obtenidos en consola 
-        // console.log(result.data) 
     };
     // Obtener los datos cuando el componente cargue 
     useEffect(() => {
-        // Datos de la API 
         getData()
     }, []);
 
     useEffect(() => {
         let a, b
         coin.forEach(({ symbol, current_price }) => {
-            if (symbol == selCoin1) {
+            if (symbol === selCoin1) {
                 a = (mainTxt * current_price) / 1
-            } else if (symbol == selCoin2) {
+            } else if (symbol === selCoin2) {
                 b = current_price
             }
         })

@@ -1,5 +1,6 @@
 import React from "react";
-import CoinRow from "./CoinRow"
+import CoinRow from "./CoinRow" 
+import './TableCoins.css'
 
 
 export default  function TableCoins ({coins})  {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { colorDec } from '../App';
+import './Card.css'
 import Graph from './Graph';
 
 
