@@ -3,7 +3,7 @@ import axios from "axios";
 import InputConvert from "./InputConvert"; 
 import { FaExchangeAlt } from "react-icons/fa"; 
 import "./Convert.css"; 
-//import { object } from "prop-types";
+import { object } from "prop-types";
 
 export default function Convert() {
     const [coin, setCoin] = useState([])

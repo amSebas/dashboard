@@ -1,7 +1,8 @@
-import { colorDec, deleteDec } from "../App"
 import { FaPlay } from 'react-icons/fa'
-import Graph from "./Graph"
 import './CardPrincipal.css'
+import { colorDec, deleteDec } from "../App"
+import Graph from "./Graph"
+
 
 
 export default function CardPrincipal({ json: {
@@ -25,7 +26,7 @@ export default function CardPrincipal({ json: {
                 </div>
 
                 <div className="graphic">
-                    <Graph type={0} coin= {id} currency= {cur} />
+                    <Graph type={0} coin={id} currency={cur} />
                 </div>
                 <div className="capitalization">
                     <h2>Capitalización</h2>

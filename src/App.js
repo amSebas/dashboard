@@ -15,14 +15,14 @@ export default function App()  {
 
   const getData = async () => {
     const response = await fetch(
-      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=4&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d%2C30d%2C90d%2C1y`
+      `https://api.coingecko.com/api/v3/coins/markets?vs_currency${selCur}&order=market_cap_desc&per_page=4&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d%2C30d%2C90d%2C1y`
     );
     const json = await response.json()
 
-    const currencys = await fetch(
+    const response_cur = await fetch(
       `https://api.coingecko.com/api/v3/simple/supported_vs_currencies`
     );
-    const cur = await currencys.json() 
+    const cur = await response_cur.json() 
 
     setCoins(json)
     setCurrency(cur)
@@ -37,14 +37,14 @@ export default function App()  {
   }, [selCur])
 
 
-  return !coins ? (
-  "cargando...") : (
+  return !coins ? "cargando..." : (
     <div className="App">
-      <Header currencys={currency} fun={setselCur} curr={selCur} /> 
+      <Header currencys={currency} fun={setselCur} cur={selCur} /> 
+      
       <main>
         <PrincipalCard json={coins[0]} cur={selCur}/>
 
-        <div className= "secundary__cards" >
+        <div className= "cards_con" >
           {coins.map(({ id, symbol, image,current_price, price_change_percentage_30d_in_currency, }, index) => {
             if (index !== 0) {
               return <Card key = {index} price={`${symbol} - ${current_price} - ${selCur}`} 

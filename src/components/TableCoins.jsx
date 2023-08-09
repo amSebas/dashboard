@@ -3,7 +3,7 @@ import CoinRow from "./CoinRow"
 import './TableCoins.css'
 
 
-export default  function TableCoins ({coins})  {
+export default function TableCoins ({coins})  {
     return(
         <table>
             <thead>

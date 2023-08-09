@@ -1,7 +1,5 @@
-import React from 'react';
+import React from 'react'
 import './Header.css'
-
-
 
 export default function Header({ currencys, fun, cur }) {
     return (
@@ -9,10 +7,7 @@ export default function Header({ currencys, fun, cur }) {
             <p> Cripto Stadistics</p>
             <div className='select-button'>
                 <select value={cur} name="coinSelect" id="coinSelect" onChange={() => { fun(document.getElementById("coinSelect").value) }}>
-                    {currencys.map((item, index) => {
-                        <option value={item} key={index}> {item} </option>
-                    })
-                    }
+                    {currencys.map((item, index) => <option value={item} key={index}> {item} </option>)}
                 </select>
             </div>
         </header>

@@ -1,4 +1,5 @@
 import React from "react";
+import React from "react";
 import { deleteDec, colorDec, numberF } from "../App";
 import Graph from "./Graph";
 import './CoinRow.css'
